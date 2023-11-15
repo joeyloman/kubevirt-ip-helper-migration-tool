@@ -117,7 +117,7 @@ func main() {
 		kubeconfig_file = filepath.Join(os.Getenv("HOME"), ".kube", "config")
 	}
 
-	var config *rest.Config = nil
+	var config *rest.Config
 	if util.FileExists(kubeconfig_file) {
 		// uses kubeconfig
 		kubeconfig := flag.String("kubeconfig", kubeconfig_file, "(optional) absolute path to the kubeconfig file")
