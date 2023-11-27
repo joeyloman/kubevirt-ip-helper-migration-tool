@@ -108,7 +108,7 @@ jobs:
 
     - name: Build
       run: |
-        go build -o "$BINARY_NAME" -v
+        CGO_ENABLED=0 go build -o "$BINARY_NAME" -v
 
     - name: Upload Release Asset
       env:
